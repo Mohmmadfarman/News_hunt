@@ -5,7 +5,7 @@ function Main({data}) {
   return (
     <div>
         {
-            data ? <Final data={data}/> :"NO Data"
+            data ? <Final data={data}/> :<h3>No Data</h3>
         }
        
         

@@ -9,15 +9,7 @@ import Nav from './component/Nav';
 function App() {
   const [data,setdata]=useState(null)
   const [takeinput,settakeinput]=useState('')
-  const [emp,setempty]=useState('')
-
-  // 
-  function empty(){
-    setempty(false)
-    console.log(emp);
-    
-
-  }
+ 
 
   function final_input(e){
     console.log(e);
@@ -59,12 +51,14 @@ function App() {
         <div id='d'>
         <h2 id="new">Daily News</h2>
          </div>
-         <Nav final_input={final_input} start={start} data={data} setdata={setdata} empty={empty}/>
+         <Nav final_input={final_input} start={start} data={data} setdata={setdata}/>
           <div>
-            {
-              emp?<Main data={data}/>:setempty(!emp)
-            }
+            
+              <Main data={data}/>
+              
+            
           </div>
+        
          </>
 
         

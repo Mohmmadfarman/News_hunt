@@ -6,6 +6,8 @@ function Final({data}) {
     console.log("fffffffffffffff");
     
     console.log(data.length);
+    console.log(typeof(data));
+    
     
    
     
@@ -35,7 +37,7 @@ function Final({data}) {
                </div>
             )
         })
-        :"Please enter valid country or city name"
+        :<h4>Please enter valid country or city name</h4>
         
        }
     </div>

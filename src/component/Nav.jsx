@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 
-function Nav({final_input,start,data,setdata,empty}) {
+function Nav({final_input,start,setdata}) {
 const [input,setinput]=useState('')
 
 function inn(e){
@@ -18,7 +18,9 @@ function fun(){
     if(input.length==0||input.length==null||input.length==''){
         
         setdata('')
-        empty()
+        alert("Please Enter the Country Name")
+       
+
        
 
 
@@ -33,14 +35,17 @@ function fun(){
     }
     
 
-}
+  }
 
   return (
+    <div>
     <div id='nav'>
        <input id='in' onChange={inn} type="text" value={input} placeholder='Enter countery name here eg-india,america' />
        <button id='btn' onClick={fun}>Search</button>
+       </div>
       
     </div>
+    
   )
 }
 
